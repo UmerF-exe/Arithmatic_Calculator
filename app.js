@@ -1,4 +1,5 @@
 var result = document.getElementById("display");
+var expression = document.getElementById("result");
 
 function numberDot(){
     result.value += document.getElementById("numberdot").value;
@@ -49,11 +50,16 @@ function division(){
     result.value += document.getElementById("operator/").value;
 }
 function calculate(){
+    expression.value = result.value;
     result.value = eval(result.value);
 }
 function clearAll(){
     result.value = " ";
+    expression.value = " ";
 }
 function deleteBtn(){
     result.value = result.value.toString().slice(0,-1);
+    if(result.value == 0){
+        expression.value = " ";
+    }
 }

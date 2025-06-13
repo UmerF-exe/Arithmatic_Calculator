@@ -10,35 +10,36 @@
     <div class="container">
         <div class="calculator">
             <div class="result">
+                <input type="text" id="result">
                 <input type="text" id="display">
             </div>
             <div class="buttons">
                 <div>
-                    <button id="clearAll" onclick="clearAll()">AC</button>
+                    <button class="operator" id="clearAll" onclick="clearAll()">AC</button>
                     <button id="number7" value="7" onclick="number7()">7</button>
                     <button id="number4" value="4" onclick="number4()">4</button>
                     <button id="number1" value="1" onclick="number1()">1</button>
                     <button id="number0" value="0" onclick="number0()">0</button>
                 </div>
                 <div>
-                    <button id="deleteBtn" onclick="deleteBtn()">DE</button>
+                    <button class="operator" id="deleteBtn" onclick="deleteBtn()">DE</button>
                     <button id="number8" value="8" onclick="number8()">8</button>
                     <button id="number5" value="5" onclick="number5()">5</button>
                     <button id="number2" value="2" onclick="number2()">2</button>
                     <button id="number00" value="00" onclick="number00()">00</button>
                 </div>
                 <div>
-                    <button id="operator/" value="/" onclick="division()">/</button>
+                    <button class="operator" id="operator/" value="/" onclick="division()">/</button>
                     <button id="number9" value="9" onclick="number9()">9</button>
                     <button id="number6" value="6" onclick="number6()">6</button>
                     <button id="number3" value="3" onclick="number3()">3</button>
                     <button id="numberdot" value="." onclick="numberDot()">.</button>
                 </div>
                 <div>
-                    <button id="operator*" value="*" onclick="multiplication()">*</button>
-                    <button id="operator-" value="-" onclick="subtraction()">-</button>
-                    <button id="operator+" value="+" onclick="addition()">+</button>
-                    <button id="equalbtn" onclick="calculate()">=</button>
+                    <button class="operator" id="operator*" value="*" onclick="multiplication()">*</button>
+                    <button class="operator" id="operator-" value="-" onclick="subtraction()">-</button>
+                    <button class="operator" id="operator+" value="+" onclick="addition()">+</button>
+                    <button class="operator" id="equalbtn" onclick="calculate()">=</button>
                 </div>
             </div>
         </div>
