@@ -36,3 +36,24 @@ function number8(){
 function number9(){
     result.value += document.getElementById("number9").value;
 }
+function addition(){
+    result.value += document.getElementById("operator+").value;
+}
+function subtraction(){
+    result.value += document.getElementById("operator-").value;
+}
+function multiplication(){
+    result.value += document.getElementById("operator*").value;
+}
+function division(){
+    result.value += document.getElementById("operator/").value;
+}
+function calculate(){
+    result.value = eval(result.value);
+}
+function clearAll(){
+    result.value = " ";
+}
+function deleteBtn(){
+    result.value = result.value.toString().slice(0,-1);
+}
