@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="calculator">
-            <div class="result">
+            <div class="result" id="maindisplay">
                 <input type="text" id="result">
                 <input type="text" id="display">
             </div>
@@ -22,7 +22,7 @@
                     <button id="number0" value="0" onclick="number0()">0</button>
                 </div>
                 <div>
-                    <button class="operator" id="deleteBtn" onclick="deleteBtn()">DE</button>
+                    <button class="operator" id="deleteBtn" onclick="deleteBtn()"><span></span></button>
                     <button id="number8" value="8" onclick="number8()">8</button>
                     <button id="number5" value="5" onclick="number5()">5</button>
                     <button id="number2" value="2" onclick="number2()">2</button>

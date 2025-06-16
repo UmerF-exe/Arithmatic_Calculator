@@ -35,6 +35,11 @@
     font-size: 40px;
     text-align: right;
     color: #ffffff;
+    pointer-events: none;
+}
+.result>#result{
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.5);
 }
 .calculator>.buttons{
     width: 100%;
@@ -63,4 +68,31 @@
 }
 .operator{
     color: orange !important;
+}
+#deleteBtn{
+    font-size: 15px !important;
+}
+#deleteBtn>span{
+    display: flex;
+    align-items: center;
+    width: 22px;
+    height: 20px;
+    border: 2px solid orange;
+    border-left-color: transparent;
+}
+#deleteBtn>span::before{
+    content: "";
+    position: absolute;
+    left: -px;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid orange;
+    border-bottom: 2px solid orange;
+    transform: rotate(45deg);
+}
+#deleteBtn>span::after{
+    content: "x";
+    padding-left: 1px;
+    font-size: 18px;
+    line-height: 1;
 }

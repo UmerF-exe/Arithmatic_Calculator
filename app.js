@@ -52,6 +52,7 @@ function division(){
 function calculate(){
     expression.value = result.value;
     result.value = eval(result.value);
+    
 }
 function clearAll(){
     result.value = " ";
