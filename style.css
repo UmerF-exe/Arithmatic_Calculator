@@ -12,7 +12,7 @@
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 .calculator{
-    width: 275px;
+    width: 295px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
 }
 .calculator>.buttons>div>button{
@@ -62,10 +62,23 @@
     background: transparent;
     cursor: pointer;
 }
+.operator{
+    color: rgb(255, 98, 0) !important;
+}
 #equalbtn{
-    height: 100px;
+    width: 100px;
     border-radius: 10px;
 }
-.operator{
-    color: orange !important;
+#equalbtn:hover{
+    background-color: rgb(4, 79, 33);
+    color: white !important;
+    transition: ease-in-out 0.5s;
+}
+#allClear{
+    color: rgb(255, 98, 0) !important;
+}
+#allClear:hover{
+    background-color: rgb(255, 0, 0);
+    color: white !important;
+    transition: ease-in-out 0.5s;
 }
