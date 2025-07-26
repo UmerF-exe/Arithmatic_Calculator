@@ -1,44 +1,49 @@
-var result = document.getElementById("display");
-var expression = document.getElementById("result");
+var display = document.getElementById("display");
+var result = document.getElementById("result");
 
 function getNum(num){
     if(num != "."){
-        result.value += Number(num);
+        display.value += Number(num);
     }
     else{
-        result.value += num;
+        display.value += num;
     }
 }
-
+console.log(!display.value);
 function operation(op){
-    switch(op){
-        case "+":
-            result.value += "+";
-            break;
-        case "-":
-            result.value += "-";
-            break;
-        case "*":
-            result.value += "*";
-            break;
-        case "/":
-            result.value += "/";
-            break;
-        case "%":
-            result.value += "%";
-            break;
-        case "AC":
-            result.value = " ";
-            expression.value = " ";
-            break;
-        case "DE":
-            result.value = result.value.toString().slice(0,-1);
-            if(result.value == 0){
-                expression.value = " ";
-            }
-            break;
-        default:
-            expression.value = result.value;
-            result.value = eval(result.value);
+    if(!display.value){
+        alert("Invalid Input! Enter any number before performing any operation");
+    }
+    else{
+        switch(op){
+            case "+":
+                display.value += " + ";
+                break;
+            case "-":
+                display.value += " - ";
+                break;
+            case "*":
+                display.value += " * ";
+                break;
+            case "/":
+                display.value += " / ";
+                break;
+            case "%":
+                display.value += " % ";
+                break;
+            case "AC":
+                display.value = " ";
+                result.value = " ";
+                break;
+            case "DE":
+                display.value = display.value.toString().slice(0,-1);
+                if(display.value == 0){
+                    result.value = " ";
+                }
+                break;
+            default:
+                result.value = display.value;
+                display.value = eval(display.value);
+        }
     }
 }
