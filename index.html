@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arithmatic Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="calculator">
+            <i class="fa-solid fa-clock-rotate-left" id="history-icon" onclick="showHistory()" style="color: white; font-size: 20px; position: absolute; top: 10; left: 10; cursor: pointer;"></i>
+            <i class="fa-solid fa-circle-xmark" id="close-icon" onclick="hideHistory()" style="color: white; font-size: 20px; position: absolute; top: 10; left: 10; cursor: pointer; display: none;" ></i>
             <div class="result" id="maindisplay">
                 <input type="text" id="result">
                 <input type="text" value="" id="display">
@@ -44,6 +47,9 @@
                     <button class="operator" id="equalbtn" onclick="operation('=')">=</button>             
                 </div>
             </div>
+        </div>
+        <div class="history" id="history">
+            
         </div>
     </div>
     <script src="app.js"></script>

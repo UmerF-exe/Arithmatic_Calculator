@@ -1,5 +1,8 @@
 var display = document.getElementById("display");
 var result = document.getElementById("result");
+var historyIcon = document.getElementById("history-icon");
+var closeIcon = document.getElementById("close-icon");
+var resultHistory = document.getElementById("history");
 
 function getNum(num){
     if(num != "."){
@@ -44,6 +47,18 @@ function operation(op){
             default:
                 result.value = display.value;
                 display.value = eval(display.value);
+                resultHistory.innerHTML += "<p>" + result.value + " = " + display.value + "</p><hr/>"
         }
     }
+}
+
+function showHistory(){
+    closeIcon.style.display = "block";
+    historyIcon.style.display = "none";
+    resultHistory.style.display = "block";
+}
+function hideHistory(){
+    closeIcon.style.display = "none";
+    historyIcon.style.display = "block";
+    resultHistory.style.display = "none"
 }
