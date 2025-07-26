@@ -9,7 +9,7 @@ function getNum(num){
         display.value += num;
     }
 }
-console.log(!display.value);
+
 function operation(op){
     if(!display.value){
         alert("Invalid Input! Enter any number before performing any operation");
