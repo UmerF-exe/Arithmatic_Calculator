@@ -1,103 +1,53 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+body{
+    overflow: hidden;
 }
 .container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+    width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 .calculator{
-    width: 295px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    background: transparent;
-    padding: 20px;
-    border: 1px solid #717377;
-    border-radius: 30px;
-    box-shadow: 5px 5px 15px rgba(113, 115, 119, 0.5);
+    width: 295px; height: auto; display: flex; flex-direction: column; background: transparent; padding: 20px; border: 1px solid #717377; border-radius: 30px; box-shadow: 5px 5px 15px rgba(113, 115, 119, 0.5);
 }
 .calculator>.result{
     margin: 80px  0px 10px 0px;
 }
 .calculator>.result>input{
-    width: 100%;
-    height: 60px;
-    overflow: visible;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 40px;
-    text-align: right;
-    color: #ffffff;
-    pointer-events: none;
+    width: 100%; height: 60px; overflow: visible; background: transparent; border: 0; outline: 0; font-size: 40px; text-align: right; color: #ffffff; pointer-events: none;
 }
 .result>#result{
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px; color: rgba(255, 255, 255, 0.5);
 }
 .calculator>.buttons{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    width: 100%; height: auto; display: flex; flex-direction: column; flex-wrap: nowrap;
 }
 .calculator>.buttons>div>button{
-    width: 40px;
-    height: 40px;
-    margin: 10px;
-    border-radius: 50%;
-    border: 0;
-    outline: 0;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.3), 5px 5px 15px rgba(0,0,0,0.3);
-    background: transparent;
-    cursor: pointer;
+    width: 40px; height: 40px; margin: 10px; border-radius: 50%; border: 0; outline: 0; font-size: 20px; font-weight: bold; color: white; box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.3), 5px 5px 15px rgba(0,0,0,0.3); background: transparent; cursor: pointer;
 }
 .operator{
     color: rgb(255, 98, 0) !important;
 }
 #equalbtn{
-    width: 100px;
-    border-radius: 10px;
+    width: 100px; border-radius: 10px;
 }
 #equalbtn:hover{
-    background-color: rgb(4, 79, 33);
-    color: white !important;
-    transition: ease-in-out 0.5s;
+    background-color: rgb(4, 79, 33); color: white !important; transition: ease-in-out 0.5s;
 }
 #allClear{
     color: rgb(255, 98, 0) !important;
 }
 #allClear:hover{
-    background-color: rgb(255, 0, 0);
-    color: white !important;
-    transition: ease-in-out 0.5s;
+    background-color: rgb(255, 0, 0); color: white !important; transition: ease-in-out 0.5s;
+}
+.icon{
+    color: white; font-size: 20px; position: absolute; top: 10; left: 10; cursor: pointer;
+}
+.icon:hover{
+    color: rgb(255, 98, 0);
 }
 .history{
-    width: 295px;
-    height: 55vh;
-    display: flex;
-    flex-direction: column;
-    background: black;
-    color: white;
-    padding: 20px;
-    border: 1px solid #717377;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    box-shadow: 5px 5px 15px rgba(113, 115, 119, 0.5);
-    position: absolute;
-    bottom: 21px;
-    display: none;
+    width: 295px; height: 55vh; display: flex; flex-direction: column; background: black; color: white; border: 1px solid #717377; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; box-shadow: 5px 5px 15px rgba(113, 115, 119, 0.5); position: absolute; bottom: 21px; display: none; overflow-y: auto;
 }
 .history>p{
     padding: 20px;

@@ -10,8 +10,8 @@
 <body>
     <div class="container">
         <div class="calculator">
-            <i class="fa-solid fa-clock-rotate-left" id="history-icon" onclick="showHistory()" style="color: white; font-size: 20px; position: absolute; top: 10; left: 10; cursor: pointer;"></i>
-            <i class="fa-solid fa-circle-xmark" id="close-icon" onclick="hideHistory()" style="color: white; font-size: 20px; position: absolute; top: 10; left: 10; cursor: pointer; display: none;" ></i>
+            <i class="fa-solid fa-clock-rotate-left icon" id="history-icon" onclick="showHistory()"></i>
+            <i class="fa-solid fa-circle-xmark icon" id="close-icon" onclick="hideHistory()" style="display: none;" ></i>
             <div class="result" id="maindisplay">
                 <input type="text" id="result">
                 <input type="text" value="" id="display">
@@ -19,9 +19,9 @@
             <div class="buttons">
                 <div>
                     <button class="operator" id="allClear" onclick="operation('AC')">C</button>
-                    <button class="operator" onclick="operation('DE')">DE</button>
                     <button class="operator" onclick="operation('%')">%</button>
                     <button class="operator" onclick="operation('/')">/</button>
+                    <button class="operator" onclick="operation('DE')"><i class="fa-solid fa-delete-left" style="color: rgb(255, 98, 00);"></i></button>
                 </div>
                 <div>
                     <button onclick="getNum(7)">7</button>
