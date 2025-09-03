@@ -3,11 +3,12 @@ var result = document.getElementById("result");
 var historyIcon = document.getElementById("history-icon");
 var closeIcon = document.getElementById("close-icon");
 var resultHistory = document.getElementById("history");
+var historyContent = document.getElementById("historyContent");
 
 window.onload = function() {
     let savedHistory = localStorage.getItem("History");
     if (savedHistory) {
-        resultHistory.innerHTML = savedHistory;
+        historyContent.innerHTML = savedHistory;
     }
 };
 
@@ -21,6 +22,7 @@ function getNum(num){
 }
 
 function operation(op){
+
     if(!display.value){
         alert("Invalid Input! Enter any number before performing any operation");
     }
@@ -55,8 +57,8 @@ function operation(op){
                 result.value = display.value;
                 display.value = eval(display.value);
                 let entry = "<p>" + result.value + " = " + display.value + "</p><hr/>";
-                resultHistory.innerHTML += entry;
-                localStorage.setItem("History", resultHistory.innerHTML);
+                historyContent.innerHTML += entry;
+                localStorage.setItem("History", historyContent.innerHTML);
         }
     }
 }
@@ -70,4 +72,8 @@ function hideHistory(){
     closeIcon.style.display = "none";
     historyIcon.style.display = "block";
     resultHistory.style.display = "none"
+}
+function deleteHistory(){
+    historyContent.innerHTML = "";
+    localStorage.removeItem("History");
 }
