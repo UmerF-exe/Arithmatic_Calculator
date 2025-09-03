@@ -1,14 +1,13 @@
 var display = document.getElementById("display");
 var result = document.getElementById("result");
 var historyIcon = document.getElementById("history-icon");
-var closeIcon = document.getElementById("close-icon");
+var icon = document.getElementById("icon");
 var resultHistory = document.getElementById("history");
-var historyContent = document.getElementById("historyContent");
 
 window.onload = function() {
     let savedHistory = localStorage.getItem("History");
     if (savedHistory) {
-        historyContent.innerHTML = savedHistory;
+        resultHistory.innerHTML = savedHistory;
     }
 };
 
@@ -87,8 +86,8 @@ function operation(op){
                 display.value = answer; 
                 updateLiveResult();
                 let entry = "<p>" + fullExpr + " = " + answer + "</p><hr/>";
-                historyContent.innerHTML += entry;
-                localStorage.setItem("History", historyContent.innerHTML);
+                resultHistory.innerHTML += entry;
+                localStorage.setItem("History", resultHistory.innerHTML);
             }
             catch(e){
                 alert("Invalid Expression");
@@ -110,20 +109,22 @@ function updateLiveResult() {
 }
 
 function saveHistory() {
-    localStorage.setItem("History", historyContent.innerHTML);
+    localStorage.setItem("History", resultHistory.innerHTML);
 }
 function showHistory(){
-    closeIcon.style.display = "block";
+    icon.style.display = "flex";
+    icon.style.justifyContent = "space-between";
+    icon.style.position = "fixed";
     historyIcon.style.display = "none";
     resultHistory.style.display = "block";
 }
 function hideHistory(){
-    closeIcon.style.display = "none";
+    icon.style.display = "none";
     historyIcon.style.display = "block";
     resultHistory.style.display = "none"
 }
 function deleteHistory(){
-    historyContent.innerHTML = "";
+    resultHistory.innerHTML = "";
     localStorage.removeItem("History");
     result.value = "";
     display.value = "";
