@@ -4,6 +4,13 @@ var historyIcon = document.getElementById("history-icon");
 var closeIcon = document.getElementById("close-icon");
 var resultHistory = document.getElementById("history");
 
+window.onload = function() {
+    let savedHistory = localStorage.getItem("History");
+    if (savedHistory) {
+        resultHistory.innerHTML = savedHistory;
+    }
+};
+
 function getNum(num){
     if(num != "."){
         display.value += Number(num);
@@ -47,7 +54,9 @@ function operation(op){
             default:
                 result.value = display.value;
                 display.value = eval(display.value);
-                resultHistory.innerHTML += "<p>" + result.value + " = " + display.value + "</p><hr/>"
+                let entry = "<p>" + result.value + " = " + display.value + "</p><hr/>";
+                resultHistory.innerHTML += entry;
+                localStorage.setItem("History", resultHistory.innerHTML);
         }
     }
 }
